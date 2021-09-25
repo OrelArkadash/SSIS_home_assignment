@@ -1,0 +1,1968 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="9/22/2021 10:42:42 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LENOVO-PC"
+  DTS:CreatorName="Lenovo-PC\אוראל"
+  DTS:DTSID="{FBE8EFD0-60A8-461F-BFEB-E8F5D130164A}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LocaleID="1037"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="53"
+  DTS:VersionGUID="{AAC3B129-5ED6-4C65-A323-4EFBA61089E6}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{11EFD98C-2F8F-4597-9BE5-2D088552D348}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1037"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1255"
+          DTS:ConnectionString="C:\Users\אוראל\Documents\קורס BI\SSIS\SSIS_home_assignment\Solutions\Ex3\Products.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ProductID"
+              DTS:DTSID="{2380BCC5-BE51-45A6-A686-E49E0B976CD2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="40"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ProductName"
+              DTS:DTSID="{C9DBE974-AF9A-4D96-8111-B573B9FD306B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SupplierID"
+              DTS:DTSID="{F7DFB309-F412-4AF3-8E8E-FF84364D93F4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CategoryID"
+              DTS:DTSID="{71855154-0348-4808-95B4-003F228E1EA4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="QuantityPerUnit"
+              DTS:DTSID="{A1B55F06-BA1B-4916-A134-F2709F3FFB75}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="UnitPrice"
+              DTS:DTSID="{50EC26CE-A9F6-4AB5-9C58-BA0676017DAD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="UnitsInStock"
+              DTS:DTSID="{FCC8CE38-6B1C-47FE-B3F1-0586F1969606}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="UnitsOnOrder"
+              DTS:DTSID="{A0011D5E-AA70-4D65-A184-BAE7DA58DF5F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ReorderLevel"
+              DTS:DTSID="{E6716B9C-5B06-4C2D-92FB-6B9F7B18DFAD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Maam"
+              DTS:DTSID="{15C58A4E-5674-4643-B4D7-8FDBA592204A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="11"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Discontinued"
+              DTS:DTSID="{99331889-7D8F-4CFB-B81B-6A7BF7AAD197}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{3D9750C9-A06A-4BBC-B68F-9B8A7BD8DAF4}"
+      DTS:ObjectName="Flat File Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1037"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1255"
+          DTS:ConnectionString="C:\Users\אוראל\Documents\קורס BI\SSIS\SSIS_home_assignment\Solutions\Ex3\Products.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ProductID"
+              DTS:DTSID="{502FA5C7-8DE6-4618-97BF-6876BEB66ABB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="40"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ProductName"
+              DTS:DTSID="{4FB14E3E-D163-47B5-95BC-CA6DFD697184}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SupplierID"
+              DTS:DTSID="{3743E601-305B-4EAF-9E8A-9FC6288B3CCC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CategoryID"
+              DTS:DTSID="{A8D5DBFF-2C20-47F5-8245-B87B2AAF82D4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="QuantityPerUnit"
+              DTS:DTSID="{043E84F8-223B-4BCA-9D07-9279A1314A01}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="UnitPrice"
+              DTS:DTSID="{E7A5C2B2-0B17-48EA-BCC1-065876E187B9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="UnitsInStock"
+              DTS:DTSID="{4BEC87D4-3AAF-4D93-9189-98D63A02146C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="UnitsOnOrder"
+              DTS:DTSID="{DA273760-9DB5-4678-8FE8-DC5B1B744CC4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ReorderLevel"
+              DTS:DTSID="{6985AEF4-EC92-4653-BD54-5EB43A599E11}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Maam"
+              DTS:DTSID="{95CDC099-5475-4964-BA34-F0F7B768E159}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="11"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Discontinued"
+              DTS:DTSID="{6379767E-2252-47FC-A3C4-1B7B224DAA19}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 2]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{615E5C58-E6D9-48F1-A5F8-5D8FD1CBCC3B}"
+      DTS:ObjectName="Flat File Connection Manager 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1037"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1255"
+          DTS:ConnectionString="C:\Users\אוראל\Documents\קורס BI\SSIS\SSIS_home_assignment\Solutions\Ex3\Products.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="1"
+              DTS:DTSID="{E3C4708A-5A32-4C0B-9066-18ADA8B1991C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Chai"
+              DTS:DTSID="{1DEDD4AA-5FF4-4B21-BED7-8B3590E1EFEC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="1"
+              DTS:DTSID="{9E8A590B-26AF-435D-A473-434E9FE19257}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="1"
+              DTS:DTSID="{BCB3C3F4-6854-42D3-952F-7CC79DA23D65}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="10 boxes x 20 bags"
+              DTS:DTSID="{4E74776D-5FFC-4395-B2A3-E663377A2914}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="19 8"
+              DTS:DTSID="{EB2C016C-2909-4AD2-9631-9447051C4B77}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="39"
+              DTS:DTSID="{1903D429-B28F-4CFF-8A00-DA94646211C1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="0"
+              DTS:DTSID="{2453BAA1-1EF4-4A49-97D5-D6AE0F83A03D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="10"
+              DTS:DTSID="{800FCC7E-F7CB-4FC1-B966-3092D9B6CE2C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 9"
+              DTS:DTSID="{8E37812E-FACE-4504-93D6-491D198A525D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="False"
+              DTS:DTSID="{00FAC4DA-4D3D-4385-BAE0-27655721E8C0}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 3]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{E0965635-78F2-4F01-958A-501FD2E7F021}"
+      DTS:ObjectName="Flat File Connection Manager 3">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1037"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1255"
+          DTS:ConnectionString="C:\Users\אוראל\Documents\קורס BI\SSIS\SSIS_home_assignment\Solutions\Ex3\Products.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ProductID"
+              DTS:DTSID="{957001AD-C94F-445A-BE8A-9907CBC23992}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ProductName"
+              DTS:DTSID="{BE78DC86-97A7-4DC1-AAB1-CCB9E824DD6E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SupplierID"
+              DTS:DTSID="{6812A6D7-1A1A-409C-923B-FF6CFA03E1F2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CategoryID"
+              DTS:DTSID="{820EFAEA-4E1B-44D1-8AEC-8FBA378669F8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="QuantityPerUnit"
+              DTS:DTSID="{492CA611-452E-4A7A-844D-59A392B5F7D1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="UnitPrice"
+              DTS:DTSID="{B450A2B8-4EF9-4A8B-A870-49EACBF6B600}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="UnitsInStock"
+              DTS:DTSID="{E940CCB0-C16F-4427-8780-1DDB97539A1C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="UnitsOnOrder"
+              DTS:DTSID="{9D2CE119-4BD0-41ED-B84E-A77F1A1B76C0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ReorderLevel"
+              DTS:DTSID="{C2191E3A-EB48-41CD-A8FA-6D8357A48055}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Maam"
+              DTS:DTSID="{7698D31D-6C79-4694-9466-D0B496688C4F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Discontinued"
+              DTS:DTSID="{39FD926B-2205-4CB8-B884-F0EB7AA4CC22}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LENOVO-PC\MSSQLSERVER01.Northwind]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{180FCDC3-236D-4897-B469-F9E90EF614CF}"
+      DTS:ObjectName="LENOVO-PC\MSSQLSERVER01.Northwind">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=LENOVO-PC\MSSQLSERVER01;Initial Catalog=Northwind;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LENOVO-PC\MSSQLSERVER01.Northwind 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{A4EE228F-043B-4251-8A9F-6B766361AA32}"
+      DTS:ObjectName="LENOVO-PC\MSSQLSERVER01.Northwind 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=LENOVO-PC\MSSQLSERVER01;Initial Catalog=Northwind;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\ProductsToSaleOrNotToSale"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{FB735B6F-4B01-4A22-A18B-865656701088}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="ProductsToSaleOrNotToSale">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{F7E14633-B35D-43C4-9AE7-A7AEC6A30598}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Data Flow Task 1"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Conditional Split"
+                  componentClassID="Microsoft.ConditionalSplit"
+                  contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+                  name="Conditional Split"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input]"
+                      description="Input to the Conditional Split Transformation"
+                      name="Conditional Split Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input].Columns[Copy of Discontinued]"
+                          cachedDataType="bool"
+                          cachedName="Copy of Discontinued"
+                          lineageId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Data Conversion 2.Outputs[Data Conversion Output].Columns[Copy of Discontinued]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Conditional Split.Outputs[Continue]"
+                      description="Output 1 of the Conditional Split Transformation"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      exclusionGroup="1"
+                      name="Continue"
+                      synchronousInputId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input]"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                          name="Expression">#{Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Data Conversion 2.Outputs[Data Conversion Output].Columns[Copy of Discontinued]} ==  TRUE </property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Specifies the friendly version of the expression. This expression version uses column names."
+                          expressionType="Notify"
+                          name="FriendlyExpression">[Copy of Discontinued] ==  TRUE </property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                          name="EvaluationOrder">0</property>
+                      </properties>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Conditional Split.Outputs[Discontinue]"
+                      description="Output 2 of the Conditional Split Transformation"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      exclusionGroup="1"
+                      name="Discontinue"
+                      synchronousInputId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input]"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                          name="Expression">#{Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Data Conversion 2.Outputs[Data Conversion Output].Columns[Copy of Discontinued]} ==  FALSE </property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Specifies the friendly version of the expression. This expression version uses column names."
+                          expressionType="Notify"
+                          name="FriendlyExpression">[Copy of Discontinued] ==  FALSE </property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                          name="EvaluationOrder">1</property>
+                      </properties>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Conditional Split.Outputs[Conditional Split Default Output]"
+                      description="Default Output of the Conditional Split Transformation"
+                      exclusionGroup="1"
+                      name="Conditional Split Default Output"
+                      synchronousInputId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input]">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          name="IsDefaultOut">true</property>
+                      </properties>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Conditional Split.Outputs[Conditional Split Error Output]"
+                      description="Error Output of the Conditional Split Transformation"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Conditional Split Error Output"
+                      synchronousInputId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Data Conversion"
+                  componentClassID="Microsoft.DataConvert"
+                  contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Data Conversion"
+                  name="Data Conversion"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Data Conversion.Inputs[Data Conversion Input]"
+                      name="Data Conversion Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Data Conversion.Inputs[Data Conversion Input].Columns[ProductName]"
+                          cachedCodepage="1255"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="ProductName"
+                          lineageId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[ProductName]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Data Conversion.Outputs[Data Conversion Output]"
+                      exclusionGroup="1"
+                      name="Data Conversion Output"
+                      synchronousInputId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Data Conversion.Inputs[Data Conversion Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ProductName]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ProductName]"
+                          name="Copy of ProductName"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[ProductName]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Data Conversion.Outputs[Data Conversion Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Data Conversion Error Output"
+                      synchronousInputId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Data Conversion.Inputs[Data Conversion Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Data Conversion 1"
+                  componentClassID="Microsoft.DataConvert"
+                  contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Data Conversion"
+                  name="Data Conversion 1"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Data Conversion 1.Inputs[Data Conversion Input]"
+                      name="Data Conversion Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Data Conversion 1.Inputs[Data Conversion Input].Columns[ProductName]"
+                          cachedCodepage="1255"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="ProductName"
+                          lineageId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[ProductName]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Data Conversion 1.Outputs[Data Conversion Output]"
+                      exclusionGroup="1"
+                      name="Data Conversion Output"
+                      synchronousInputId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Data Conversion 1.Inputs[Data Conversion Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of ProductName]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of ProductName]"
+                          name="Copy of ProductName"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[ProductName]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Data Conversion 1.Outputs[Data Conversion Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Data Conversion Error Output"
+                      synchronousInputId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Data Conversion 1.Inputs[Data Conversion Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Data Conversion 1.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Data Conversion 1.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Data Conversion 1.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Data Conversion 1.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Data Conversion 2"
+                  componentClassID="Microsoft.DataConvert"
+                  contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Data Conversion"
+                  name="Data Conversion 2"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Data Conversion 2.Inputs[Data Conversion Input]"
+                      name="Data Conversion Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Data Conversion 2.Inputs[Data Conversion Input].Columns[Discontinued]"
+                          cachedCodepage="1255"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Discontinued"
+                          lineageId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[Discontinued]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Data Conversion 2.Outputs[Data Conversion Output]"
+                      exclusionGroup="1"
+                      name="Data Conversion Output"
+                      synchronousInputId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Data Conversion 2.Inputs[Data Conversion Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Data Conversion 2.Outputs[Data Conversion Output].Columns[Copy of Discontinued]"
+                          dataType="bool"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Data Conversion 2.Outputs[Data Conversion Output].Columns[Copy of Discontinued]"
+                          name="Copy of Discontinued"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[Discontinued]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Data Conversion 2.Outputs[Data Conversion Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Data Conversion Error Output"
+                      synchronousInputId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Data Conversion 2.Inputs[Data Conversion Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Data Conversion 2.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Data Conversion 2.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Data Conversion 2.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Data Conversion 2.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="1037"
+                  name="Flat File Source"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 3]"
+                      connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 3]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[ProductID]"
+                          codePage="1255"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ProductID]"
+                          length="50"
+                          lineageId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[ProductID]"
+                          name="ProductID"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[ProductName]"
+                          codePage="1255"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ProductName]"
+                          length="50"
+                          lineageId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[ProductName]"
+                          name="ProductName"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[SupplierID]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[SupplierID]"
+                          lineageId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[SupplierID]"
+                          name="SupplierID"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[CategoryID]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CategoryID]"
+                          lineageId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[CategoryID]"
+                          name="CategoryID"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[QuantityPerUnit]"
+                          codePage="1255"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[QuantityPerUnit]"
+                          length="50"
+                          lineageId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[QuantityPerUnit]"
+                          name="QuantityPerUnit"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[UnitPrice]"
+                          codePage="1255"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[UnitPrice]"
+                          length="50"
+                          lineageId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[UnitPrice]"
+                          name="UnitPrice"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[UnitsInStock]"
+                          codePage="1255"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[UnitsInStock]"
+                          length="50"
+                          lineageId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[UnitsInStock]"
+                          name="UnitsInStock"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[UnitsOnOrder]"
+                          codePage="1255"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[UnitsOnOrder]"
+                          length="50"
+                          lineageId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[UnitsOnOrder]"
+                          name="UnitsOnOrder"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[ReorderLevel]"
+                          codePage="1255"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ReorderLevel]"
+                          length="50"
+                          lineageId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[ReorderLevel]"
+                          name="ReorderLevel"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[Maam]"
+                          codePage="1255"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Maam]"
+                          length="50"
+                          lineageId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[Maam]"
+                          name="Maam"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[Discontinued]"
+                          codePage="1255"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Discontinued]"
+                          length="50"
+                          lineageId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[Discontinued]"
+                          name="Discontinued"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ProductID]"
+                          codePage="1255"
+                          dataType="str"
+                          length="50"
+                          name="ProductID" />
+                        <externalMetadataColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ProductName]"
+                          codePage="1255"
+                          dataType="str"
+                          length="50"
+                          name="ProductName" />
+                        <externalMetadataColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[SupplierID]"
+                          codePage="1255"
+                          dataType="str"
+                          length="50"
+                          name="SupplierID" />
+                        <externalMetadataColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CategoryID]"
+                          codePage="1255"
+                          dataType="str"
+                          length="50"
+                          name="CategoryID" />
+                        <externalMetadataColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[QuantityPerUnit]"
+                          codePage="1255"
+                          dataType="str"
+                          length="50"
+                          name="QuantityPerUnit" />
+                        <externalMetadataColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[UnitPrice]"
+                          codePage="1255"
+                          dataType="str"
+                          length="50"
+                          name="UnitPrice" />
+                        <externalMetadataColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[UnitsInStock]"
+                          codePage="1255"
+                          dataType="str"
+                          length="50"
+                          name="UnitsInStock" />
+                        <externalMetadataColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[UnitsOnOrder]"
+                          codePage="1255"
+                          dataType="str"
+                          length="50"
+                          name="UnitsOnOrder" />
+                        <externalMetadataColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ReorderLevel]"
+                          codePage="1255"
+                          dataType="str"
+                          length="50"
+                          name="ReorderLevel" />
+                        <externalMetadataColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Maam]"
+                          codePage="1255"
+                          dataType="str"
+                          length="50"
+                          name="Maam" />
+                        <externalMetadataColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Discontinued]"
+                          codePage="1255"
+                          dataType="str"
+                          length="50"
+                          name="Discontinued" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="1255"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="OLE DB Destination"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[prod_ToSale]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">create table Prod_tosale
+(
+[ProductID] [int] NULL,
+	[ProductName] [nvarchar](80) NULL,
+	[SupplierID] [int] NULL,
+	[CategoryID] [int] NULL,
+	[UnitPrice] [money] NULL,
+	[Discontinued] [bit] NULL
+
+)</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1255</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">0</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[LENOVO-PC\MSSQLSERVER01.Northwind]"
+                      connectionManagerRefId="Package.ConnectionManagers[LENOVO-PC\MSSQLSERVER01.Northwind]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ProductID]"
+                          cachedCodepage="1255"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="ProductID"
+                          externalMetadataColumnId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ProductID]"
+                          lineageId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[ProductID]" />
+                        <inputColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SupplierID]"
+                          cachedDataType="i4"
+                          cachedName="SupplierID"
+                          externalMetadataColumnId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SupplierID]"
+                          lineageId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[SupplierID]" />
+                        <inputColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CategoryID]"
+                          cachedDataType="i4"
+                          cachedName="CategoryID"
+                          externalMetadataColumnId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CategoryID]"
+                          lineageId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[CategoryID]" />
+                        <inputColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[UnitPrice]"
+                          cachedCodepage="1255"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="UnitPrice"
+                          externalMetadataColumnId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UnitPrice]"
+                          lineageId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[UnitPrice]" />
+                        <inputColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Discontinued]"
+                          cachedCodepage="1255"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Discontinued"
+                          externalMetadataColumnId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Discontinued]"
+                          lineageId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[Discontinued]" />
+                        <inputColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of ProductName]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="Copy of ProductName"
+                          externalMetadataColumnId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ProductName]"
+                          lineageId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ProductName]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ProductID]"
+                          dataType="i4"
+                          name="ProductID" />
+                        <externalMetadataColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ProductName]"
+                          dataType="wstr"
+                          length="80"
+                          name="ProductName" />
+                        <externalMetadataColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SupplierID]"
+                          dataType="i4"
+                          name="SupplierID" />
+                        <externalMetadataColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CategoryID]"
+                          dataType="i4"
+                          name="CategoryID" />
+                        <externalMetadataColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UnitPrice]"
+                          dataType="cy"
+                          name="UnitPrice" />
+                        <externalMetadataColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Discontinued]"
+                          dataType="bool"
+                          name="Discontinued" />
+                        <externalMetadataColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[maam]"
+                          dataType="cy"
+                          name="maam" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination 1"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="OLE DB Destination 1"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[prud_NotToSale]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1255</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">0</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination 1.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[LENOVO-PC\MSSQLSERVER01.Northwind]"
+                      connectionManagerRefId="Package.ConnectionManagers[LENOVO-PC\MSSQLSERVER01.Northwind]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination 1.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Copy of ProductName]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="Copy of ProductName"
+                          externalMetadataColumnId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[ProductName]"
+                          lineageId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of ProductName]" />
+                        <inputColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Copy of Discontinued]"
+                          cachedDataType="bool"
+                          cachedName="Copy of Discontinued"
+                          externalMetadataColumnId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Discontinued]"
+                          lineageId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Data Conversion 2.Outputs[Data Conversion Output].Columns[Copy of Discontinued]" />
+                        <inputColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[ProductID]"
+                          cachedCodepage="1255"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="ProductID"
+                          externalMetadataColumnId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[ProductID]"
+                          lineageId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[ProductID]" />
+                        <inputColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[UnitPrice]"
+                          cachedCodepage="1255"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="UnitPrice"
+                          externalMetadataColumnId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[UnitPrice]"
+                          lineageId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[UnitPrice]" />
+                        <inputColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[SupplierID]"
+                          cachedDataType="i4"
+                          cachedName="SupplierID"
+                          externalMetadataColumnId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[SupplierID]"
+                          lineageId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[SupplierID]" />
+                        <inputColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[CategoryID]"
+                          cachedDataType="i4"
+                          cachedName="CategoryID"
+                          externalMetadataColumnId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[CategoryID]"
+                          lineageId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[CategoryID]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[ProductID]"
+                          dataType="i4"
+                          name="ProductID" />
+                        <externalMetadataColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[ProductName]"
+                          dataType="wstr"
+                          length="80"
+                          name="ProductName" />
+                        <externalMetadataColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[SupplierID]"
+                          dataType="i4"
+                          name="SupplierID" />
+                        <externalMetadataColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[CategoryID]"
+                          dataType="i4"
+                          name="CategoryID" />
+                        <externalMetadataColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[UnitPrice]"
+                          dataType="cy"
+                          name="UnitPrice" />
+                        <externalMetadataColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Discontinued]"
+                          dataType="bool"
+                          name="Discontinued" />
+                        <externalMetadataColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[maam]"
+                          dataType="cy"
+                          name="maam" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination 1.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination 1.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1.Paths[Continue]"
+                  endId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Continue"
+                  startId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Conditional Split.Outputs[Continue]" />
+                <path
+                  refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1.Paths[Data Conversion Output]"
+                  endId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination 1.Inputs[OLE DB Destination Input]"
+                  name="Data Conversion Output"
+                  startId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Data Conversion 1.Outputs[Data Conversion Output]" />
+                <path
+                  refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1.Paths[Data Conversion Output1]"
+                  endId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input]"
+                  name="Data Conversion Output"
+                  startId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Data Conversion 2.Outputs[Data Conversion Output]" />
+                <path
+                  refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1.Paths[Data Conversion Output2]"
+                  endId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  name="Data Conversion Output"
+                  startId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Data Conversion.Outputs[Data Conversion Output]" />
+                <path
+                  refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1.Paths[Discontinue]"
+                  endId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Data Conversion 1.Inputs[Data Conversion Input]"
+                  name="Discontinue"
+                  startId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Conditional Split.Outputs[Discontinue]" />
+                <path
+                  refId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1.Paths[Flat File Source Output]"
+                  endId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Data Conversion 2.Inputs[Data Conversion Input]"
+                  name="Flat File Source Output"
+                  startId="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\ProductsToSaleOrNotToSale\TruncateTables"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{4EA5AC5E-35F1-466F-BA9D-95A708D96096}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="TruncateTables"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{180FCDC3-236D-4897-B469-F9E90EF614CF}"
+              SQLTask:SqlStatementSource="truncate table [dbo].[prod_ToSale]&#xA;&#xA;truncate table [dbo].[prud_NotToSale]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\ProductsToSaleOrNotToSale.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{1A209782-890B-46FC-926F-64981EF99526}"
+          DTS:From="Package\ProductsToSaleOrNotToSale\TruncateTables"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\ProductsToSaleOrNotToSale\Data Flow Task 1" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="155,42"
+          Id="Package\ProductsToSaleOrNotToSale\TruncateTables"
+          TopLeft="13,16" />
+        <NodeLayout
+          Size="164,42"
+          Id="Package\ProductsToSaleOrNotToSale\Data Flow Task 1"
+          TopLeft="19,86" />
+        <EdgeLayout
+          Id="Package\ProductsToSaleOrNotToSale.PrecedenceConstraints[Constraint]"
+          TopLeft="90.5,58">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="10.5,28"
+              Start="0,0"
+              End="10.5,20.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,10" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,10"
+                    Point2="0,14"
+                    Point3="4,14" />
+                  <mssgle:LineSegment
+                    End="6.5,14" />
+                  <mssgle:CubicBezierSegment
+                    Point1="6.5,14"
+                    Point2="10.5,14"
+                    Point3="10.5,18" />
+                  <mssgle:LineSegment
+                    End="10.5,20.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="205,178"
+          Size="205,221"
+          Id="Package\ProductsToSaleOrNotToSale"
+          TopLeft="305,87" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\ProductsToSaleOrNotToSale\Data Flow Task 1">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="156,42"
+          Id="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Flat File Source"
+          TopLeft="569,10" />
+        <NodeLayout
+          Size="159,42"
+          Id="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Conditional Split"
+          TopLeft="564,137" />
+        <NodeLayout
+          Size="177,42"
+          Id="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination"
+          TopLeft="409.222222222222,380.555555555556" />
+        <NodeLayout
+          Size="161,42"
+          Id="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Data Conversion"
+          TopLeft="424.555555555556,251.222222222222" />
+        <NodeLayout
+          Size="170,42"
+          Id="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Data Conversion 1"
+          TopLeft="671.666666666667,244.666666666667" />
+        <EdgeLayout
+          Id="Package\ProductsToSaleOrNotToSale\Data Flow Task 1.Paths[Discontinue]"
+          TopLeft="668.666666666667,179">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="88,65.6666666666666"
+              Start="0,0"
+              End="88,58.1666666666666">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.6591946865919" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.6591946865919"
+                    Point2="0,26.6591946865919"
+                    Point3="4,26.6591946865919" />
+                  <mssgle:LineSegment
+                    End="84,26.6591946865919" />
+                  <mssgle:CubicBezierSegment
+                    Point1="84,26.6591946865919"
+                    Point2="88,26.6591946865919"
+                    Point3="88,30.6591946865919" />
+                  <mssgle:LineSegment
+                    End="88,58.1666666666666" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="17.89865234375,31.6591946865919,52.2026953125,9.470703125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="186,42"
+          Id="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination 1"
+          TopLeft="657.222222222222,387.222222222222" />
+        <EdgeLayout
+          Id="Package\ProductsToSaleOrNotToSale\Data Flow Task 1.Paths[Data Conversion Output]"
+          TopLeft="753.444444444444,286.666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,100.555555555556"
+              Start="0,0"
+              End="0,93.0555555555556">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,93.0555555555556" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="170,42"
+          Id="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\Data Conversion 2"
+          TopLeft="561,72" />
+        <EdgeLayout
+          Id="Package\ProductsToSaleOrNotToSale\Data Flow Task 1.Paths[Flat File Source Output]"
+          TopLeft="725,31">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="6,62"
+              Start="0,0"
+              End="13.5,62">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="24.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="24.5,0"
+                    Point2="28.5,0"
+                    Point3="28.5,4" />
+                  <mssgle:LineSegment
+                    End="28.5,58" />
+                  <mssgle:CubicBezierSegment
+                    Point1="28.5,58"
+                    Point2="28.5,62"
+                    Point3="24.5,62" />
+                  <mssgle:LineSegment
+                    End="13.5,62" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ProductsToSaleOrNotToSale\Data Flow Task 1.Paths[Data Conversion Output1]"
+          TopLeft="644.75,114">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,23"
+              Start="0,0"
+              End="0,15.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ProductsToSaleOrNotToSale\Data Flow Task 1.Paths[Continue]"
+          TopLeft="618.333333333333,179">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-113.277777777778,72.2222222222222"
+              Start="0,0"
+              End="-113.277777777778,64.7222222222222">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.320603293206" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.320603293206"
+                    Point2="0,29.320603293206"
+                    Point3="-4,29.320603293206" />
+                  <mssgle:LineSegment
+                    End="-109.277777777778,29.320603293206" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-109.277777777778,29.320603293206"
+                    Point2="-113.277777777778,29.320603293206"
+                    Point3="-113.277777777778,33.320603293206" />
+                  <mssgle:LineSegment
+                    End="-113.277777777778,64.7222222222222" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-76.8827560763889,34.320603293206,40.487734375,9.5537109375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ProductsToSaleOrNotToSale\Data Flow Task 1.Paths[Data Conversion Output2]"
+          TopLeft="501.388888888889,293.222222222222">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,87.3333333333333"
+              Start="0,0"
+              End="0,79.8333333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,79.8333333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\ProductsToSaleOrNotToSale\Data Flow Task 1\OLE DB Destination 1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

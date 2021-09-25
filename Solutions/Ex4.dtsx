@@ -1,0 +1,43 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="9/24/2021 11:33:45 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LENOVO-PC"
+  DTS:CreatorName="Lenovo-PC\אוראל"
+  DTS:DTSID="{22AC9C3A-BA19-43A6-9ABE-2078C299531F}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LocaleID="1037"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{90D65A95-B143-43BD-8D0B-88968C748515}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables />
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <AnnotationLayout
+          Text="• נשתמש ב derived column- כאשר נרצה לבצע טרנספורמציה כלשהי לדאטה שלנו . לדוג' אם נרצה  להוסיף עמודה ל-Data  או שנרצה להחליף עמודה קיימת . &#xA;• נשתמש ב- data conversion כאשר נצטרך לשנות את הדאטה טייפ של עמודה כלשהי בין קובץ &quot;המקור&quot; לקובץ &quot;היעד&quot; . דבר זה נועד על מנת שלא יהיה מצב של  אי התאמה בזמן קליטת הקלט. &#xA;• בכל package יש Control Flow אחד בלבד . Control Flow נועד לתזמן לנו את התהליך – מה יתבצע לפני מה . &#xA;• ישנם 3 סוגי CONTAINERS – &#xA;1. For Loop Container – מבצע פעולה מס' פעמים בדומה ללולאה . צריך לקנפג בו 3 פרמטרים  - אתחול של הפרמטר שלנו ,תעשה כל עוד ולהגיד לו מה יקרה בכל שלב . &#xA;2. Sequence Container – לוקח מס' יחידות ומאגד אותן ליח' אחת &#xA;3. Foreach Loop Container – מיכל לכל האובייקט . מבצע  לולאה אשר עוברת על מס' קבצים/טבלאות  או סדרה של אובייקטים אחרים . &#xA;&#xA;• Lookup   - בדוק האם הערך קיים בדאטה שלנו , במידה וקיים/לא קיים ניתן לבצע פעולה כשלהי בהתאם לצורך . ישנם 3 אופציות : &#xA;1. Full Cache – להוריד את כל הטבלה לתוך ה- RAM ומבצע בדיקה מול הערך שאנו רוצים לבדוק .במידה ויש התאמה שומר בזיכרון של המחשב . לוקח הרבה מאד זיכרון . היתרון שזה יבצע את הבדיקה מהר יותר . נשתמש בפעולה זו בטבלאות קטנות . &#xA;2. No Cache – כל הבדיקה תעשה מול הטבלה שבדיסק . פעולה איטית יותר ונשתמש בה בדיקת טבלאות גדולות . &#xA;3. Partial cache- שימוש חלקי בזיכרון. יבצע את הבדיקה מול הטבלה שבדיסק , במידה וימצא ערכים דומים ישמור בזיכרון . שמיש בטבלאות בינוניות . &#xA;&#xA;• בארו את המושגים הבאים : &#xA;• Dtsx – סיומת של קובץ ב-SSIS . ראשי תיבות של Data Transformation Services Package בפורמט של XML . &#xA;•  TASK – תהליך כלשהו שמבצעים . &#xA;•  Container – מיכל שמאגד לתוכו מס' פעולות ,יכול לשמש כלולאה או כ&quot;מחסן&quot; לכלל הפעולות . &#xA;&#xA;• היחס הוא שב- Solution ישנם מספר Project שבהם יכולים להיות מספר Packages . &#xA;&#xA;"
+          ParentId="Package"
+          FontInfo="{assembly:Null}"
+          Size="1272,359"
+          Id="9141d83d-e5af-4121-9cd8-fbb040e955bf"
+          TopLeft="18,33" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
